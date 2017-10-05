@@ -9,12 +9,12 @@ but is quite enjoyable to play.
 int xSize = 25;
 int ySize = 25;
 
-int difficulty = 10;
+int difficulty = 100;
 float xCellSize;
 float yCellSize;
 
 int[][] mineGrid = new int[xSize][ySize];
-int[][] grid = new int[xSize][ySize];
+int[][] grid = new int[xSize][ySize]; 
 
 boolean gameRunning = true;
 boolean gameWin = false;
@@ -251,6 +251,9 @@ void draw()
   } else
   {
 
+    fill(0,0,0);
+    color(0,0,0);
+    rect(width/2-350,height/2-100,625 ,425);
     fill(255, 125, 100);
     color(255, 125, 100);
     if (keyPressed ==true && key == ENTER)
@@ -273,6 +276,8 @@ void draw()
       }
       else
       {
+            fill(0, 255, 150);
+    color(0, 255, 150);
         textSize(100);
       text("You WIN!", width/2 -275, height/2);
       text("Game Over", width/2 -300,height /2 + 100);
